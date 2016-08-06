@@ -48,7 +48,7 @@ class ServicesGameOfLifeServiceSpec extends Specification {
         //thank to @Stepwise previous state are still in memory
 
         when:"test an empty cell"
-        result = gameOfLifeService.countNeighbours(0, 0)
+        def result = gameOfLifeService.countNeighbours(0, 0)
 
         then:
         result == 0
