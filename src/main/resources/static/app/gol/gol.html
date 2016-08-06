@@ -1,0 +1,39 @@
+<section class="row top-buffer">
+    <article class="col-sm-10 col-sm-offset-2">Select size for row and column</article>
+    <div class="row top-buffer">
+        <div class="col-sm-3 col-sm-offset-2">
+            <div class="row">
+                <div class="col-sm-6">
+                    Row:
+                    <input type="number" ng-model="vm.rowNumber" class="form-control"> </input>
+                </div>
+                <div class="col-sm-6">
+                    col:
+                    <input type="number" ng-model="vm.colNumber" class="form-control"> </input>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2" style="margin-top: 20px;">
+            <span class="btn-group">
+                <button ng-click="vm.init()" type="button" class="btn btn-primary">Re init</button>
+                <button ng-click="vm.nextRound()" type="button" class="btn btn-primary">next</button>
+            </span>
+            <span class="btn-group">
+                <span ng-show="!vm.running"><button ng-click="vm.play()" type="button" class="btn btn-primary">play !</button></span>
+                <span ng-show="vm.running"><button ng-click="vm.stop()" type="button" class="btn btn-danger">Stop !</button></span>
+            </span>
+        </div>
+    </div>
+    <div class="row top-buffer">
+        <div class="center-block">
+            <table class="grid">
+                <tr ng-repeat="row in vm.gridRow track by $index">
+                    <td ng-repeat="col in vm.gridCol track by $index" ng-click="vm.addCell($parent.$index, $index)"
+                        ng-class="vm.grid[$parent.$index][$index] ? 'alive' : 'dead'">
+                        <span></span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</section>

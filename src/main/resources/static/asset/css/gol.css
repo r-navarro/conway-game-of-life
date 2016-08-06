@@ -1,0 +1,24 @@
+.grid {
+    margin: auto;
+}
+
+table.grid  td {
+    width: 1.5em;
+    height: 1.5em;
+    text-align: center;
+    vertical-align: middle;
+    border: solid 1px #ddd;
+}
+
+table.grid td.alive {
+    background-color: #9900EE;
+}
+
+table.grid td.dead {
+    background-color: #efe;
+}
+
+
+.top-buffer {
+    margin-top:20px;
+}

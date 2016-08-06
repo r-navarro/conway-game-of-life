@@ -1,0 +1,16 @@
+{
+  "name": "Game-of-life",
+  "private": true,
+  "version": "0.0.0",
+  "description": "A technical test US-Mobile",
+  "repository": "https://github.com/angular/angular-seed",
+  "license": "MIT",
+  "devDependencies": {
+    "bower": "^1.7.7"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+
+    "prestart": "npm install"
+  }
+}
